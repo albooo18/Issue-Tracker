@@ -56,3 +56,28 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Reviewer Guide
+
+If you are reviewing this projecte quick way to test the app and verify the main features:
+
+1. Copy the example environment file and set up the app:
+
+```bash
+cp .env.example .env
+composer install
+php artisan key:generate
+php artisan migrate --seed
+npm install
+npm run dev
+php artisan serve
+```
+
+2. Open the app at `http://127.0.0.1:8000`.
+3. Register a user or log in with an existing account.
+4. Create a project, then create an issue inside it.
+5. Add tags to the issue and attach members.
+6. Post a comment on the issue detail page.
+7. Use the search input on the issues page to filter by title or description.
+
+This setup shows the app's authentication, project ownership rules, issue creation flow, AJAX tag/member controls, and comment system in action.
